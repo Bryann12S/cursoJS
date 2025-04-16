@@ -41,16 +41,24 @@ export class CreatepComponent implements OnInit {
         if(response.project) {
           
           //Subida de la imagen
-          this._uploadService.makeFileRequest(Global.url+"upload-image/"+response.project._id, [], this.filesToUpload, 'image').then((result:any) => {
-            
-            this.save_project = result.project; 
+          if(this.filesToUpload.length >= 1) {
+              this._uploadService.makeFileRequest(Global.url+"upload-image/"+response.project._id, [], this.filesToUpload, 'image').then((result:any) => {
+              
+              this.save_project = result.project; 
+              this.status = "success";
+              form.reset();
+            });
+          }
+          else {
+            this.save_project = response.project; 
             this.status = "success";
-            console.log(result);
             form.reset();
-          });
+          }
 
         }else{
-          this.status = "failed";
+          this.save_project = response.project;
+          this.status = "error";
+          form.reset();
         }
       },
       error => {

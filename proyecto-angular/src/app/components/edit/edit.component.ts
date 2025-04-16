@@ -56,14 +56,18 @@ export class EditComponent implements OnInit{
       response => {
         if(response.project) {
           //Subida de la imagen
-          this._uploadService.makeFileRequest(Global.url+"upload-image/"+response.project._id, [], this.filesToUpload, 'image').then((result:any) => {
-            this.save_project = result.project; 
+          if(this.filesToUpload.length >= 1) {
+            this._uploadService.makeFileRequest(Global.url+"upload-image/"+response.project._id, [], this.filesToUpload, 'image').then((result:any) => {
+              this.save_project = result.project; 
+              this.status = "success";
+              console.log(result);
+            });
+          }else{
+            this.save_project = response.project; 
             this.status = "success";
-            console.log(result);
-            form.reset();
-          });
-        }else{
-          this.status = "failed";
+          }
+        }else{ 
+          this.status = "failed"; 
         }
       },
       error => {
