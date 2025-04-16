@@ -1,0 +1,308 @@
+/* Importatr fuents custom*/
+@font-face{
+    font-family: "yanone";
+    src: url("fonts/yanone.ttf") format("truetype");
+}
+
+@font-face{
+    font-family: "finger";
+    src: url("fonts/finger.ttf") format("woff");
+}
+
+/*Generales*/
+
+/*para todos los elementos de la web*/
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+
+body{
+    font-family: "yanone", Arial, Helvetica; /*fuente personalizada*/
+    font-size: 20px; /*aumento de tamaño de la fuente*/
+    background: url("../img/pattern.png") repeat; /*patrón de fondo*/
+    background-attachment: fixed; /*fondo fijo*/
+}
+
+.clearfix{
+    float: none; /*elimina el float*/
+    clear: both; /*elimina el clear*/
+}
+
+/*Barra de navegación / cabecera */
+
+header{
+    width: 100%;
+    height: 90px; /*altura de la cabecera*/
+    background: rgb(53, 103, 164, 0.8); /*color de fondo*/
+    position: fixed; /*fondo fijo*/
+    text-transform: uppercase; /*texto en mayúsculas*/
+}
+
+header ul{
+    display: block;
+    width: 34%; /*ancho de la lista*/
+    height: inherit; /*hereda la altura de la cabecera*/
+    margin: 0px auto; /*margen superior*/
+    margin-top: -3px; /*margen superior negativo*/
+}
+
+header ul li{ 
+    display: inline-block; /*elementos en línea*/
+    margin: 0px auto; /*margen automático*/
+    text-align: center; /*alineación del texto*/
+    line-height: 88px; /*altura de la línea*/
+}
+
+header a{
+    display: block; /*elemento en bloque*/
+    padding-right: 20px; /*relleno a la derecha*/
+    padding-left: 20px; /*relleno a la izquierda*/
+    height: inherit; /*hereda la altura de la cabecera*/
+    text-decoration: none; /*sin subrayado*/
+    color: white; /*color del texto*/
+    transition: all 300ms; /*transición suave*/
+}
+
+header a:hover,
+.actived{
+    background: rgb(0, 0, 0, 0.8); /*color de fondo al pasar el ratón*/
+    color: #fff; /*color del texto al pasar el ratón*/
+}
+
+/*Logotipo */
+
+#logo{
+    font-family: "finger"; /*fuente personalizada*/
+    font-size: 30px; /*tamaño de la fuente*/
+} 
+
+#logo a{
+    transition: color 500ms, transform 500ms; /*transición suave*/
+}
+
+#logo a:hover{
+    background: transparent; /*sin color de fondo al pasar el ratón*/
+    color: black; /*color del texto al pasar el ratón*/
+    transform: scale(1.50, 1.50); /*escala al pasar el ratón*/
+    text-decoration: none; /*sin subrayado*/
+    text-shadow: 0px 0px 5px white; /*sombra del texto*/
+}
+
+/*
+Contenedr principal
+*/
+
+#content {
+    min-height: 650px;
+    height: auto !important; /*altura automática*/
+    width: 80%; /*ancho del contenedor*/
+    margin: 0px auto; /*margen automático*/
+    box-shadow: 0px 0px 40px; /*sombra del contenedor*/
+    border-left: 1px solid #b7b7b7; /*bordes del contenedor*/
+    border-right: 1px solid #b7b7b7; /*bordes del contenedor*/
+    background: rgb(255, 255, 255, 1.7); /*color de fondo*/
+    padding-top: 120px; /*relleno superior*/
+}
+
+/*pie de pagina*/
+footer{
+    width: 80%;
+    margin: 0px auto; /*margen automático*/
+    padding-top: 15px; /*relleno superior*/
+    color: rgba(0,0,0, 0.5); /*color del texto*/
+}
+
+/*Sobre mi*/
+#title{
+    width: 70%; /*ancho del título*/
+    margin: 0px auto; /*margen automático*/
+    text-align: center; /*alineación del texto*/
+    margin-bottom: 70px; /*margen inferior*/
+}
+
+#title h1{
+    font-family: "finger"; /*fuente personalizada*/
+    font-size: 60px; /*tamaño de la fuente*/
+    color: rgb(53, 103, 164); /*color del texto*/
+    text-transform: uppercase; /*texto en mayúsculas*/
+    margin-bottom: 20px; /*margen inferior*/
+    border-bottom: 1px solid #b7b7b7; /*borde inferior*/ 
+    padding-bottom: 10px; /*relleno inferior*/
+}
+#title h2{
+    font-size: 25px; /*tamaño de la fuente*/
+    color: gray;   /*color del texto*/
+    margin-top: 5px; /*margen superior*/
+    margin-bottom: 5px; /*margen inferior*/
+}
+
+article.about{
+    width: 70%; /*ancho del artículo*/
+    margin: 0px auto; /*margen automático*/ 
+    font-size: 20px; /*tamaño de la fuente*/
+    margin-bottom: 23px; /*margen inferior*/
+}
+
+.about h2 {
+    border-bottom: 1px solid #ccc; /*borde inferior*/
+    padding-bottom: 5px; /*relleno inferior*/
+    margin-bottom: 5px; /*margen inferior*/
+     
+}
+
+.about p{
+    padding-top: 20px; /*relleno superior*/
+    padding-bottom: 30px; /*relleno inferior*/
+    text-align: justify; /*alineación del texto*/
+}
+
+/*Sección con formulario*/
+
+.container{
+    padding: 50px; /*relleno*/
+    padding-top: 10px; /*relleno superior*/
+    
+}
+
+.container .image{
+    float: left; /*elemento flotante*/
+    width: 47%; /*ancho del elemento*/
+
+}
+
+.container .image img{
+    width: 96%;
+}
+.container .data{
+    float: left;
+    width: 48%;
+    margin-left: 30px; /*margen izquierdo*/
+}
+
+.container h2{
+    display: block; /*elemento en bloque*/
+    border-bottom: 1px solid #ccc; /*borde inferior*/
+    padding-bottom: 5px; /*relleno inferior*/
+    margin-bottom: 10px; /*margen inferior*/
+}
+
+form{
+    width: 80%; /*ancho del formulario*/
+}
+
+form label{
+    display: block; /*elemento en bloque*/
+    width: 100%; /*ancho del formulario*/;
+    margin-top: 10px; /*margen superior*/
+    margin-bottom: 5px; /*margen inferior*/ 
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form textarea{
+    width: 40%; /*ancho del formulario*/
+    padding: 5px; /*relleno*/
+
+}
+
+form button,
+form input[type="submit"],
+.button-edit,
+.button-delete{
+    display: block; /*elemento en bloque*/
+    font-size: 17px; /*tamaño de la fuente*/
+    padding: 10px; /*relleno*/
+    margin-top: 15px; /*margen superior*/
+    background: rgb(53, 103, 164, 1); /*color de fondo*/
+    color: white; /*color del texto*/
+    border: 1px solid rgb(13, 67, 133, 1) ; /*sin borde*/
+    cursor: pointer; /*cursor de mano*/
+}
+.button-edit,
+.button-delete{
+    width: 30%;
+    float: left; /*elemento flotante*/
+    margin-right: 10px;
+    text-decoration: none; /*sin subrayado*/
+    text-align: center; /*alineación del texto*/
+    font-size: 20px; /*tamaño de la fuente*/
+}
+
+.button-edit{
+    background: orange;
+}
+.button-delete{
+    background: red; /*color de fondo*/
+}
+
+form button:hover,
+form input[type="submit"]:hover{
+  
+    background: rgb(53, 103, 164, 0.8); /*color de fondo*/
+    color: white; /*color del texto*/
+    border: 1px solid rgb(13, 67, 133, 1) ; /*sin borde*/
+}
+form input[disabled]{
+    opacity: 0.5; /*opacidad*/
+    cursor: not-allowed; /*cursor de no permitido*/
+}
+
+.form_error{
+    padding: 5px; /*relleno*/
+    margin-top: 10px; /*margen superior*/
+    margin-bottom: 10px; /*margen inferior*/
+    background: rgb(255, 0, 0, 1); /*color de fondo*/
+    color: white; /*color del texto*/
+    font-size: 15px; /*tamaño de la fuente*/
+    margin-left: 5px; /*margen izquierdo automático*/
+}
+
+.message{
+    width: 32%; /*ancho del mensaje*/
+    padding: 5px; /*relleno*/
+    border: 1px solid #eee; /*borde*/
+}
+
+.success{
+    background: rgb(17, 100, 17); /*color de fondo*/
+    color: white; /*color del texto*/
+}
+.success a{
+    color: white; /*color del texto*/
+}
+
+.failed{
+    background: rgb(255, 0, 0, 1); /*color de fondo*/   
+    color: white; /*color del texto*/
+}
+
+/*Style on projects*/
+
+.project{
+    list-style: none;
+    display: block;
+    float: left; /*elemento flotante*/
+    width: 31%;
+    text-align: center; /*alineación del texto*/
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.project .image{
+    width: 100%; /*ancho de la imagen*/
+    height: 150px;
+    overflow: hidden; /*ocultar el desbordamiento*/
+}
+
+.project img{
+    width: 75%; /*ancho de la imagen*/
+}
+
+.project a{
+    text-decoration: none;
+    color: black; /*color del texto*/
+}
