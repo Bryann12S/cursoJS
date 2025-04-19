@@ -9,6 +9,7 @@ import { ErrorComponent } from './components/error/error.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { EditComponent } from './components/edit/edit.component';
 
+
 const routes: Routes = [
   { path: '', component: AboutComponent },
   { path: 'sobre-mi', component: AboutComponent },
